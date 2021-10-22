@@ -1,0 +1,8 @@
+{
+  "name": "server-chat-app",
+  "version": "1.0.0",
+  "description": "backend server api for chat app",
+  "main": "app.js",
+  "author": "Rishabh singh",
+  "license": "ISC"
+}
