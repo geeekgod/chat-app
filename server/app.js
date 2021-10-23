@@ -15,9 +15,16 @@ const io = new Server(server, {
   },
 });
 
+io.on("connection", (socket) => {
+  console.log(socket.id);
+
+  socket.on("disconnect", () => {
+    console.log(`User ${socket.id} disconnected`);
+  });
+});
 
 const port = process.env.PORT || 5000;
 
 server.listen(5000, () => {
-  console.log(`server listening on http://localhost/${port}`);
+  console.log(`server listening on http://localhost:${port}`);
 });
