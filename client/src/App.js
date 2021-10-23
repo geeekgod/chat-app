@@ -19,23 +19,25 @@ const App = () => {
 
   return (
     <div className="App">
-      <h3>Join Chat</h3>
-      <input
-        type="text"
-        placeholder="John..."
-        onChange={(event) => {
-          setUsername(event.target.value);
-        }}
-      />
-      <input
-        type="text"
-        placeholder="Room ID..."
-        onChange={(event) => {
-          setRoom(event.target.value);
-        }}
-      />
-      <button onClick={joinRoom}>Join A Room</button>
-
+      <div className="joinChatContainer">
+        {" "}
+        <h3>Join Chat</h3>
+        <input
+          type="text"
+          placeholder="John..."
+          onChange={(event) => {
+            setUsername(event.target.value);
+          }}
+        />
+        <input
+          type="text"
+          placeholder="Room ID..."
+          onChange={(event) => {
+            setRoom(event.target.value);
+          }}
+        />
+        <button onClick={joinRoom}>Join A Room</button>{" "}
+      </div>
       <Chat socket={socket} username={username} room={room} />
     </div>
   );
