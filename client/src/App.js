@@ -3,8 +3,11 @@ import io from "socket.io-client";
 import Chat from "./Chat";
 import "./App.css";
 import { v4 as uuid } from "uuid";
+import dotenv from "dotenv";
 
-const socket = io.connect("http://localhost:5000");
+// dotenv.config();
+console.log(process.env.REACT_APP_SERVER_URL);
+const socket = io.connect(process.env.REACT_APP_SERVER_URL);
 
 const App = () => {
   const [username, setUsername] = useState("");
