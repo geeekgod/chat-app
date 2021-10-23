@@ -19,14 +19,14 @@ const Chat = ({ socket, username, room }) => {
         }
     };
 
-    useEffect(()=>{
+    useEffect(() => {
         socket.on("receive_message", (data) => {
             console.log(data);
-        } )
-    },[socket])
+        })
+    }, [socket])
 
     return (
-        <div>
+        <div className="chat-window">
             <div className="chat-header">
                 <p>WeBChat App</p>
             </div>
