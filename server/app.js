@@ -39,3 +39,7 @@ const port = process.env.PORT || 5000;
 server.listen(5000, () => {
   console.log(`server listening on http://localhost:${port}`);
 });
+
+app.get("/", (req, res) => {
+  res.json({ message: "Hello world" });
+});
