@@ -5,6 +5,10 @@
   "main": "app.js",
   "author": "Rishabh singh",
   "license": "ISC",
+  "scripts": {
+    "start": "node app.js",
+    "devStart": "nodemon app.js"
+  },
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.17.1",
