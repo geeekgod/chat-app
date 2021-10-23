@@ -24,7 +24,7 @@ body {
   margin-bottom: 1rem;
 }
 .joinChatContainer input {
-  width: 210px;
+  width: 310px;
   height: 40px;
   margin: 7px;
   border: 2px solid #43a047;
@@ -34,7 +34,7 @@ body {
 }
 
 .joinChatContainer button {
-  width: 225px;
+  width: 325px;
   height: 50px;
   margin: 7px;
   border: none;

@@ -60,7 +60,7 @@ const Chat = ({ socket, username, room }) => {
             <div className="chat-footer">
                 <input
                     type="text"
-                    placeholder="Hey.."
+                    placeholder="Type a message"
                     value={currentMessage}
                     onChange={(event) => {
                         setCurrentMessage(event.target.value);

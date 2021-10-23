@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import io from "socket.io-client";
 import Chat from "./Chat";
 import "./App.css";
+import { v4 as uuid } from "uuid";
 
 const socket = io.connect("http://localhost:5000");
 
@@ -23,19 +24,25 @@ const App = () => {
       {!showChat ? (
         <div className="joinChatContainer">
           {" "}
-          <h3>Join Chat</h3>
+          <h3>Join WeBChat</h3>
           <input
             type="text"
-            placeholder="John..."
+            placeholder="Enter your name"
             onChange={(event) => {
               setUsername(event.target.value);
             }}
           />
           <input
             type="text"
-            placeholder="Room ID..."
+            placeholder="Press enter to get room id or paste room id"
+            value={room}
             onChange={(event) => {
               setRoom(event.target.value);
+            }}
+            onKeyPress={(e) => {
+              if (e.key === "Enter") {
+                setRoom(uuid());
+              }
             }}
           />
           <button onClick={joinRoom}>Join A Room</button>{" "}
