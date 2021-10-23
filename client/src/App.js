@@ -1,10 +1,14 @@
+import React from 'react'
+import io from 'socket.io-client'
 
-function App() {
+const socket = io.connect("http://localhost:5000")
+
+const App = () => {
   return (
     <div className="App">
-      <h1>Hello</h1>
+      <h1>Hello New Chat app</h1>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
