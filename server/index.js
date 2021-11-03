@@ -11,8 +11,11 @@ app.use(cors());
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: process.env.CLIENT_URL,
-    methods: ["GET", "POST", "PUT", "POST"],
+    origin: [
+      "https://thisisrishabh-webchatapp.vercel.app",
+      "http://localhost:3000",
+      process.env.CLIENT_URL
+    ],
   },
 });
 
@@ -34,12 +37,12 @@ io.on("connection", (socket) => {
   });
 });
 
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 5120;
 
 server.listen(5000, () => {
   console.log(`server listening on http://localhost:${port}`);
 });
 
 app.get("/", (req, res) => {
-  res.json({ message: "Hello world" });
+  res.json({ message: "Hello world", data: process.env.CLIENT_URL });
 });

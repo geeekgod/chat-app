@@ -2,12 +2,12 @@
   "name": "server-chat-app",
   "version": "1.0.0",
   "description": "backend server api for chat app",
-  "main": "app.js",
+  "main": "index.js",
   "author": "Rishabh singh",
   "license": "ISC",
   "scripts": {
-    "start": "node app.js",
-    "devStart": "nodemon app.js"
+    "start": "node index.js",
+    "devStart": "nodemon index.js"
   },
   "dependencies": {
     "cors": "^2.8.5",
