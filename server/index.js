@@ -39,7 +39,7 @@ io.on("connection", (socket) => {
 
 const port = process.env.PORT || 5120;
 
-server.listen(5000, () => {
+server.listen(port, () => {
   console.log(`server listening on http://localhost:${port}`);
 });
 
