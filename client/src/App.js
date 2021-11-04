@@ -7,7 +7,9 @@ import dotenv from "dotenv";
 
 dotenv.config();
 console.log(process.env.REACT_APP_SERVER_URL);
-const socket = io.connect(process.env.REACT_APP_SERVER_URL);
+const socket = io.connect(process.env.REACT_APP_SERVER_URL, {
+  transports: ["websocket", "polling", "flashsocket"],
+});
 
 const App = () => {
   const [username, setUsername] = useState("");
